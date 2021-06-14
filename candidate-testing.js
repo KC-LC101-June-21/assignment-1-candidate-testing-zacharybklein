@@ -16,7 +16,7 @@ function askForName() {
   // TODO 1.1b: Ask for candidate's name //
 let candidateName = (input.question("Candidate Name: "));
 
-console.log("Welcome " + candidateName + "!");
+// console.log("Welcome " + candidateName + "!");
 }
 
 
