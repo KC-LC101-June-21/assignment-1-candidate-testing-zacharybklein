@@ -35,7 +35,7 @@ for (let i = 0; i < questions.length; i++) {
     correctAnswers = Number(correctAnswers + 0)
     } 
     console.log(`Your Answer: ${candidateAnswers}`);
-    console.log(`Correct Answer: ${correctAnswer[i]}`);
+    console.log(`Correct Answer: ${correctAnswer[i]} \n`);
 }
 }
 
