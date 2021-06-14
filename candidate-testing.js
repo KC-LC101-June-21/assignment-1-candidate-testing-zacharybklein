@@ -39,6 +39,10 @@ for (let i = 0; i < questions.length; i++) {
 }
 }
 
+
+
+  // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
+
 function gradeQuiz(candidateAnswers) {
   let grade = (correctAnswers / 5) * 100;
   console.log(`>>> Overall Grade: ${grade}% (${correctAnswers} of 5 responses correct) <<<`)
@@ -51,10 +55,6 @@ function gradeQuiz(candidateAnswers) {
   }
 }
 gradeQuiz
-
-  // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-
-
 
 
 
