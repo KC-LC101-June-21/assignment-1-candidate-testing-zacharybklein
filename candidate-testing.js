@@ -28,7 +28,7 @@ function askQuestion() {
 
 for (let i = 0; i < questions.length; i++) {
     candidateAnswers.push(input.question(questions[i]));
-    if (candidateAnswers[i] === correctAnswer[i] || candidateAnswers[i].toString().toLowerCase() === correctAnswer[i].toString().toLowerCase() || candidateAnswers[i].toString().toUpperCase() === correctAnswer[i].toString().toUpperCase()) {
+    if (candidateAnswers[i] === correctAnswer[i] || candidateAnswers[i].toString().toLowerCase() === correctAnswer[i].toString().toLowerCase()) {
     correctAnswers = Number(correctAnswers + 1)
     }    
     else {
