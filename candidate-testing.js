@@ -57,7 +57,6 @@ function gradeQuiz(candidateAnswers) {
 gradeQuiz
 
 
-
 function runProgram() {
   askForName();
   // TODO 1.1c: Ask for candidate's name //
