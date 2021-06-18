@@ -29,7 +29,11 @@ function askQuestion() {
 for (let i = 0; i < questions.length; i++) {
     console.log(`${i + 1}) ${questions[i]}`);
     candidateAnswers.push(input.question());
-    
+    if (candidateAnswers[i].toString().toLowerCase() === correctAnswers[i].toString().toLowerCase()) {
+    numberRight.push(candidateAnswers[i]);
+    }    
+    else {
+    } 
     console.log(`Your Answer: ${candidateAnswers[i]}`);
     console.log(`Correct Answer: ${correctAnswers[i]} \n`);
 }
@@ -43,12 +47,12 @@ function gradeQuiz(candidateAnswers) {
   let score = 0;
   for (i = 0; i < questions.length; i++) {
     if (candidateAnswers[i].toString().toLowerCase() === correctAnswers[i].toString().toLowerCase()) {
-    numberRight.push(candidateAnswers[i]);
+    score = Number(score + 1)
     }    
     else {
     } 
   }
-  let grade = (numberRight.length / candidateAnswers.length) * 100;
+  let grade = (score / candidateAnswers.length) * 100;
     console.log(`>>> Overall Grade: ${grade}% (${numberRight.length} of 5 responses correct) <<<`)
     if (grade >= 80) {
     console.log(`>>> Status: PASSED <<<`);
