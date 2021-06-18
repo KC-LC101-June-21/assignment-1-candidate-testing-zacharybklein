@@ -43,14 +43,22 @@ for (let i = 0; i < questions.length; i++) {
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 
 function gradeQuiz(candidateAnswers) {
-  let grade = (correctAnswer.length / candidateAnswers.length) * 100;
-  console.log(`>>> Overall Grade: ${grade}% (${correctAnswer.length} of 5 responses correct) <<<`)
-  if (grade >= 80) {
-  console.log(`>>> Status: PASSED <<<`);
+  let score = 0;
+  for (i = 0; i < questions.length; i++) {
+    if (candidateAnswers[i].toString().toLowerCase() === correctAnswers[i].toString().toLowerCase()) {
+    score = Number(score + 1)
+    }    
+    else {
+    } 
   }
-  else {
-  console.log(`>>> Status: FAILED <<<`);
-  return grade;
+  let grade = (score / candidateAnswers.length) * 100;
+    console.log(`>>> Overall Grade: ${grade}% (${correctAnswer.length} of 5 responses correct) <<<`)
+    if (grade >= 80) {
+    console.log(`>>> Status: PASSED <<<`);
+  }
+    else {
+    console.log(`>>> Status: FAILED <<<`);
+    return grade;
   }
 }
 gradeQuiz
